@@ -21,7 +21,6 @@ xmlns:jsp="http://java.sun.com/JSP/Page">
 	<body>
 		<div id="wrapper">
 			<jsp:include page="/WEB-INF/views/header.jsp"/>	
-			<jsp:include page="/WEB-INF/views/sidebar.jsp"/>
 			<div id="page-wrapper">
 				<div class="row">
 	                <div class="col-lg-12">
