@@ -10,7 +10,7 @@
                    <div class="panel-heading">
                        <div class="row">
                            <div class="col-xs-3">
-                               <i class="fa fa-comments fa-5x"></i>
+                               <i class="fa fa-book fa-5x"></i>
                            </div>
                            <div class="col-xs-9 text-right">
                                <div class="huge">26</div>
@@ -19,12 +19,12 @@
                        </div>
                    </div>
                    <a href="#">
-                       <span class="panel-footer">
-                           <span class="pull-left">Ver detalle</span>
-                           <span class="pull-right"><i
-			class="fa fa-arrow-circle-right"></i></span>
-                           <span class="clearfix"></span>
-                       </span>
+                       <div class="panel-footer">
+                           <div class="pull-left">Ver detalle</div>
+                           <div class="pull-right"><i
+			class="fa fa-arrow-circle-right"></i></div>
+                           <div class="clearfix"></div>
+                       </div>
                    </a>
                </div>
            </div>
@@ -33,7 +33,7 @@
                    <div class="panel-heading">
                        <div class="row">
                            <div class="col-xs-3">
-                               <i class="fa fa-tasks fa-5x"></i>
+                               <i class="fa fa-clock-o fa-5x"></i>
                            </div>
                            <div class="col-xs-9 text-right">
                                <div class="huge">12</div>
@@ -42,12 +42,12 @@
                        </div>
                    </div>
                    <a href="#">
-                       <span class="panel-footer">
-                           <span class="pull-left">Ver detalle</span>
-                           <span class="pull-right"><i
-			class="fa fa-arrow-circle-right"></i></span>
-                           <span class="clearfix"></span>
-                       </span>
+                       <div class="panel-footer">
+                           <div class="pull-left">Ver detalle</div>
+                           <div class="pull-right"><i
+			class="fa fa-arrow-circle-right"></i></div>
+                           <div class="clearfix"></div>
+                       </div>
                    </a>
                </div>
            </div>
@@ -56,7 +56,7 @@
                    <div class="panel-heading">
                        <div class="row">
                            <div class="col-xs-3">
-                               <i class="fa fa-shopping-cart fa-5x"></i>
+                               <i class="fa fa-money fa-5x"></i>
                            </div>
                            <div class="col-xs-9 text-right">
                                <div class="huge">124</div>
@@ -65,12 +65,12 @@
                        </div>
                    </div>
                    <a href="#">
-                       <span class="panel-footer">
-                           <span class="pull-left">Ver detalle</span>
-                           <span class="pull-right"><i
-			class="fa fa-arrow-circle-right"></i></span>
-                           <span class="clearfix"></span>
-                       </span>
+                       <div class="panel-footer">
+                           <div class="pull-left">Ver detalle</div>
+                           <div class="pull-right"><i
+			class="fa fa-arrow-circle-right"></i></div>
+                           <div class="clearfix"></div>
+                       </div>
                    </a>
                </div>
            </div>
@@ -79,22 +79,22 @@
                    <div class="panel-heading">
                        <div class="row">
                            <div class="col-xs-3">
-                               <i class="fa fa-support fa-5x"></i>
+                               <i class="fa fa-user fa-5x"></i>
                            </div>
                            <div class="col-xs-9 text-right">
-                               <div class="huge">13</div>
-                               <div>Mi perfil</div>
+                               <div class="huge">Mi Perfil</div>
+                               <div>Datos de la cuenta</div>
                            </div>
                        </div>
                    </div>
                    <a href="#">
-                       <span class="panel-footer">
-                           <span class="pull-left">View Details</span>
-                           <span class="pull-right">
+                       <div class="panel-footer">
+                           <div class="pull-left">Ver detalle</div>
+                           <div class="pull-right">
                            		<i class="fa fa-arrow-circle-right"></i>
-                           	</span>
-                           <span class="clearfix"></span>
-                       </span>
+                           	</div>
+                           <div class="clearfix"></div>
+                       </div>
                    </a>
                </div>
            </div>
