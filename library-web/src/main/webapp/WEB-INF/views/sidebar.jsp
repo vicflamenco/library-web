@@ -2,7 +2,7 @@
 	<div class="sidebar-nav navbar-collapse">
 		<ul class="nav" id="side-menu">
 			<li class="sidebar-search">
-                <form action="search.html" method="get" class="input-group custom-search-form">
+                <form action="/library-web/Books/search.html" method="get" class="input-group custom-search-form">
                     <input type="text" name="query" class="form-control" placeholder="Search...">
                     <span class="input-group-btn">
                     <button class="btn btn-default" type="button">
@@ -13,7 +13,7 @@
                 <!-- /input-group -->
             </li>
 			<li>
-				<a href="index.html"><i class="fa fa-dashboard fa-fw"></i>
+				<a href="/library-web/index.html"><i class="fa fa-dashboard fa-fw"></i>
 					Inicio
 				</a>
 			</li>
