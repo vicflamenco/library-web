@@ -26,6 +26,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		dispatcher.addMapping("*.woff2");
 		dispatcher.addMapping("*.ttf");
 		dispatcher.addMapping("*.html");
+		dispatcher.addMapping("*.png");
 	}
 	
 	private AnnotationConfigWebApplicationContext getContext(){

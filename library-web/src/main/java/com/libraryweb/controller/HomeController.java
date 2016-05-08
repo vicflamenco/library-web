@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 	@RequestMapping(value = "index", method = RequestMethod.GET)
-	public String sayHello(Model model){
+	public String home(Model model){
 		model.addAttribute("msg", "hola");
 		
 		return "Home/home";
