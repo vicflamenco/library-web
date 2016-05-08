@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
-<link href="<c:url value="/css/kendo.common.min.css" />"  rel="stylesheet" type="text/css"  />
-<link href="<c:url value="/css/kendo.default.min.css" />"  rel="stylesheet" type="text/css"  />
+<link href="<c:url value="/css/kendo.common-bootstrap.min.css" />"  rel="stylesheet" type="text/css"  />
+<link href="<c:url value="/css/kendo.bootstrap.min.css" />"  rel="stylesheet" type="text/css"  />
 <link href="<c:url value="/css/bootstrap.css" />"  rel="stylesheet" type="text/css" />
 <link href="<c:url value="/css/sb-admin-2.css" />"  rel="stylesheet" type="text/css"  />
 <link href="<c:url value="/css/font-awesome.css" />"  rel="stylesheet" type="text/css"  />

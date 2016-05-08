@@ -13,7 +13,7 @@
 <jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
 <div class="row"> 
     <div class="col-lg-12">
-        <h1 class="page-header">Sistema bibliotecario</h1>
+        <h1 class="page-header">Sistema bibliotecario</h1> 
     </div>
 </div>
 <div class="row">

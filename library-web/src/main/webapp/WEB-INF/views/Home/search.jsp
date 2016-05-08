@@ -14,12 +14,20 @@
 	
 	<div class="row"> <!-- Titulo de la página -->
 	    <div class="col-lg-12">
-	        <h1 class="page-header">Buscando libro: ${ query }</h1>
+	        <h1 class="page-header">Buscando libro: ${ query } - Coincidencias ${ result.size() }</h1>
 	    </div>
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
-		Resultados...
+		<kendo:grid name="librosGrid" pageable="true">
+	        <kendo:grid-columns>
+	            <kendo:grid-column title="Nombre" field="titulo" />
+	            <kendo:grid-column title="Año" field="anio" format="{0000}" />
+	            <kendo:grid-column title="Edición" field="edicion" />
+	        </kendo:grid-columns>
+	        <kendo:dataSource data="${ result }" pageSize="10"/>
+	        <kendo:grid-pageable input="true" numeric="true" />
+	    </kendo:grid>
 		</div>
 	</div>
 	
