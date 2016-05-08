@@ -94,7 +94,7 @@
                                <i class="fa fa-user fa-5x"></i>
                            </div>
                            <div class="col-xs-9 text-right">
-                               <div class="huge">Mi Perfil</div>
+                               <div class="huge">Perfil</div>
                                <div>Datos de la cuenta</div>
                            </div>
                        </div>
