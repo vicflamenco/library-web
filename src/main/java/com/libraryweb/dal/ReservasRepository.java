@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.libraryweb.model.LibroInventario;
+import com.libraryweb.model.Reserva;
 
 @Repository
 public class ReservasRepository {
@@ -85,5 +86,56 @@ public class ReservasRepository {
 			return false;
 		}
 		
+	}
+	
+	public List<Reserva> getReservations(){
+		
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        String currentDateTime = dateFormat.format(new Date());
+		
+        System.out.println(currentDateTime);
+        
+		String sql = "SELECT r.*, l.titulo titulo, a.nombre autor,"
+				+ " e.nombre editorial FROM reserva r"
+				+ " INNER JOIN libro l on l.idLibro = r.idLibro"
+				+ " INNER JOIN editorial e on e.idEditorial = l.idEditorial"
+				+ " INNER JOIN autor a on a.idAutor = l.idAutor"
+				+ " WHERE idUsuario='vicflamenco' "
+				+ " AND fecha_expiracion > '" + currentDateTime + "';";
+		
+		List<Reserva> result = new ArrayList<Reserva>();
+		
+		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
+		
+		for (Map<String, Object> row : rows) {
+			
+			Reserva reserva = new Reserva();
+			
+			reserva.setIdReserva((int)row.get("idReserva"));
+			reserva.setFecha_reserva((Date)row.get("fecha_reserva"));
+			reserva.setFecha_expiracion((Date)row.get("fecha_expiracion"));
+			reserva.setIdLibro_interno((int)row.get("idlibro_interno"));
+			reserva.setIdLibro((String)row.get("idlibro"));
+			reserva.setIdUsuario((String)row.get("idusuario"));
+			
+			reserva.setTituloLibro((String)row.get("titulo"));
+			reserva.setNombreAutor((String)row.get("autor"));
+			reserva.setNombreEditorial((String)row.get("editorial"));
+			result.add(reserva);
+		}
+		
+		return result;
+	}
+	
+	public boolean cancelReservation(int idReserva, int idLibro_interno){
+		
+		String sqlDelete = "DELETE FROM reserva WHERE idReserva = " + idReserva + ";";
+		String sqlUpdate = "UPDATE libro_inventario SET estado = 'disponible'"
+				+ " WHERE idLibro_interno = " + idLibro_interno + ";"; 
+		
+		int resultDelete = this.jdbcTemplate.update(sqlDelete);
+		int resultUpdate = this.jdbcTemplate.update(sqlUpdate);
+		
+		return resultDelete > 0 && resultUpdate > 0;
 	}
 }

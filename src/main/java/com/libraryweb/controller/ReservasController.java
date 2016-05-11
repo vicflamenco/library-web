@@ -13,6 +13,7 @@ import com.libraryweb.dal.LibrosRepository;
 import com.libraryweb.dal.ReservasRepository;
 import com.libraryweb.model.Libro;
 import com.libraryweb.model.LibroInventario;
+import com.libraryweb.model.Reserva;
 
 @Controller
 @RequestMapping(value = "/Reserve/")
@@ -46,5 +47,27 @@ public class ReservasController {
 		model.addAttribute("libro", libro);
 		
 		return "Reserve/reserve";
+	}
+	
+	@RequestMapping(value = "reservations", method = RequestMethod.GET)
+	public String getReservations(Model model)
+	{
+		
+		List<Reserva> reservas = this.reservasRepo.getReservations();
+		
+		model.addAttribute("reservas", reservas);
+		
+		return "Reserve/reservations";
+	}
+	
+	@RequestMapping(value = "cancel", method = RequestMethod.GET)
+	public String cancelReservation(@RequestParam("reservation") int idReserva,
+			@RequestParam("inventory") int idLibro_interno, Model model)
+	{
+		boolean result = this.reservasRepo.cancelReservation(idReserva, idLibro_interno);
+		
+		model.addAttribute("result", result);
+		
+		return "Reserve/cancel";
 	}
 }
